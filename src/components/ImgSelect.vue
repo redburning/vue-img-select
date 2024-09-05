@@ -1,5 +1,5 @@
 <template>
-    <div class="rich-select">
+    <div class="img-select">
         <div class="input-wrapper" @click="showSelectOptions = true;">
             <div class="input-prefix-icon-container">
                 <img class="input-prefix-icon" v-if="selectedOption.icon" :src="selectedOption.icon" :alt="selectedOption.label" />
@@ -86,7 +86,7 @@ export default {
 </script>
 
 <style scoped>
-.rich-select {
+.img-select {
     position: relative;
     width: 400px;
 }

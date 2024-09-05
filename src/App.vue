@@ -1,24 +1,16 @@
 <template>
     <div id="app">
-        <rich-select v-model="selectedDatasource" :options="datasourceOptions"></rich-select>
+        <img-select v-model="selectedDatasource" :options="datasourceOptions"></img-select>
     </div>
 </template>
 
 <script>
-import RichSelect from './components/RichSelect'
-
-import mysqlLogo from '@/assets/images/mysql_logo.svg'
-import sqlServerLogo from '@/assets/images/sql_server_logo.svg'
-import postgresLogo from '@/assets/images/postgresql_logo.svg'
-import oracleLogo from '@/assets/images/oracle_logo.svg'
-import esLogo from '@/assets/images/elasticsearch_logo.svg'
-import prometheusLogo from '@/assets/images/prometheus_logo.svg'
-import influxdbLogo from '@/assets/images/influxdb_logo.svg'
+import ImgSelect from './components/ImgSelect'
 
 export default {
     name: 'App',
     components: {
-        RichSelect
+        ImgSelect
     },
     data () {
         return {
@@ -27,43 +19,37 @@ export default {
                     key: '1',
                     label: 'MySQL-1',
                     type: 'MySQL',
-                    icon: mysqlLogo
+                    icon: require('@/assets/images/mysql_logo.svg')
                 },
                 {
                     key: '2',
-                    label: 'SQL Server-2',
-                    type: 'SQL Server',
-                    icon: sqlServerLogo
+                    label: 'PostgresSQL-2',
+                    type: 'PostgresSQL',
+                    icon: require('@/assets/images/postgresql_logo.svg')
                 },
                 {
                     key: '3',
-                    label: 'PostgresSQL-3',
-                    type: 'PostgresSQL',
-                    icon: postgresLogo
+                    label: 'Oracle-3',
+                    type: 'Oracle',
+                    icon: require('@/assets/images/oracle_logo.svg')
                 },
                 {
                     key: '4',
-                    label: 'Oracle-4',
-                    type: 'Oracle',
-                    icon: oracleLogo
+                    label: 'Elasticsearch-4',
+                    type: 'Elasticsearch',
+                    icon: require('@/assets/images/elasticsearch_logo.svg')
                 },
                 {
                     key: '5',
-                    label: 'Elasticsearch-5',
-                    type: 'Elasticsearch',
-                    icon: esLogo
+                    label: 'Prometheus-5',
+                    type: 'Prometheus',
+                    icon: require('@/assets/images/prometheus_logo.svg')
                 },
                 {
                     key: '6',
-                    label: 'Prometheus-6',
-                    type: 'Prometheus',
-                    icon: prometheusLogo
-                },
-                {
-                    key: '7',
-                    label: 'influxdb-7',
+                    label: 'influxdb-6',
                     type: 'influxDB',
-                    icon: influxdbLogo
+                    icon: require('@/assets/images/influxdb_logo.svg')
                 }
             ],
             selectedDatasource: {}
